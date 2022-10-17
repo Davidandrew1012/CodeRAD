@@ -2,6 +2,22 @@
     display: none;
 }
 
+.navbar-toggler {
+    position: absolute;
+    right: var(--size-20);
+    top: var(--size-10);
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+    color: var(--white);
+    font-size: var(--size-20);
+    cursor: pointer;
+    pointer-events: none;
+}
+
 .navbar .container {
     display: flex;
     align-items: center;
@@ -30,6 +46,16 @@
     transition: ease-in-out 0.3s;
 }
 
+.navbar.sticky {
+    background-color: var(--white);
+    box-shadow: 0px 0px 20px rgb(48 63 100 / 20%);
+}
+
+.navbar.sticky .navbar-toggler span,
+.navbar.sticky .navbar-brand {
+    color: var(--font-color-dark);
+}
+
 .bg-header,
 .video-demo {
     background-color: var(--footer);
@@ -41,7 +67,9 @@
     padding: 4.6875rem 0;
 }
 
-.bg-header {background-image: url("../assets/images/bg-header-1.jpg");}
+.bg-header {background-image: url("../assets/images/bg-header-1.jpg");
+    padding: var(--size-150) var(--size-100);
+}
 .video-demo {background-image: url("../assets/images/bg-demo.jpg"); }
 
 
@@ -89,8 +117,9 @@
     flex: 1;
 }
 
-.block-text {
-    padding-right: var(--size-50);
+.why-me-wrapper .block-text {
+    padding-right: var(--size-100);
+    max-width: 35rem;
 }
 
 .block-text span {
@@ -153,6 +182,7 @@ span.bg-color-6 {background-image: linear-gradient(90deg, #a1ecff 0%, #7dbcff 10
 .video-demo .block-text h2,
 .video-demo .block-text p {
     color: var(--white);
+    margin: var(--size-50) 0;
 }
 
 .video-box {
@@ -188,7 +218,7 @@ span.bg-color-6 {background-image: linear-gradient(90deg, #a1ecff 0%, #7dbcff 10
 .pricing-table {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(215px,1fr));
-    gap: var(--size-18);
+    gap: var(--size-30);
     margin: auto;
     align-items: flex-start;
 }
@@ -196,7 +226,7 @@ span.bg-color-6 {background-image: linear-gradient(90deg, #a1ecff 0%, #7dbcff 10
 .price-card {
     background-color: var(--white);
     border-radius: 8px;
-    padding: var(--size-16);
+    padding: var(--size-40) var(--size-16);
 }
 
 .price-card .checked {color: var(--success);}
@@ -234,6 +264,8 @@ span.bg-color-6 {background-image: linear-gradient(90deg, #a1ecff 0%, #7dbcff 10
 .price-card li {margin-bottom: var(--size-20);}
 
 .plan-btn-wrapper {text-align: center;}
+
+.plan-btn-wrapper a {width: 100%;}
 
 .testimonials{margin: var(--size-100) 0;}
 
@@ -307,12 +339,16 @@ footer .footer-top {
 footer.bg-footer { background-color: var(--footer);}
 footer .footer-bottom {background-color: var(--footer-base);}
 
-footer .footer-col {justify-self: center;}
+footer .footer-col {
+    justify-self: center;
+    max-width: 15.625rem;
+}
 
 .footer-top h5 {
     color: var(--white);
     font-weight: 500;
     margin-bottom: var(--size-16);
+    font-size: var(--size-16);
 }
 
 .contact-info li {
@@ -336,6 +372,10 @@ footer .footer-col {justify-self: center;}
     color: #858497;
 }
 
+.services-wrapper h5 {
+    margin-bottom: initial;
+}
+
 .recent-posts {
     display: flex;
     margin-bottom: var(--size-16);
@@ -351,6 +391,7 @@ footer .footer-col {justify-self: center;}
 .post-inner h6 a {
     color: var(--white);
     font-weight: 600;
+    font-size: 0.75rem;
 }
 
 .post-inner span {
